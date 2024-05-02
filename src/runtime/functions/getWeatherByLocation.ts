@@ -2,7 +2,7 @@
 import type { LocationWeatherData } from '../models/LocationWeatherData'
 import type { WeatherApiResponse } from '../models/WeatherApiResponse'
 
-export default async function getWeatherData(location: string) {
+export default async function getWeatherData(location: string): Promise<LocationWeatherData> {
   const apiResponse = await $fetch(`/api/weather/?location=${location}`) as WeatherApiResponse
 
   if (!apiResponse) {

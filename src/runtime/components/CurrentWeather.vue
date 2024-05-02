@@ -6,7 +6,7 @@
     >
       <h4>{{ weatherData.name }} </h4>
       <span v-if="scale=='c'">{{ weatherData.weather.temperatureCelcius }} °C</span>
-      <span v-if="scale=='f'">{{ weatherData.weather.temperatureFarenheit }} °F</span>
+      <span v-if="scale=='f'">{{ weatherData.weather.temperatureFahrenheit }} °F</span>
       <span :title="weatherData.weather.conditionText"><img :src="weatherData.weather.conditionIcon"></span>
     </div>
   </div>
@@ -14,7 +14,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { getWeatherByLocation } from '#imports'
+import getWeatherByLocation from '../functions/getWeatherByLocation'
+import { useAsyncData } from '#imports'
 
 const props = defineProps({
   location: {
