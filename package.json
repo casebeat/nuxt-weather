@@ -1,6 +1,6 @@
 {
   "name": "nuxt-weather",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Weather Nuxt module",
   "repository": "casebeat/nuxt-weather",
   "license": "MIT",
