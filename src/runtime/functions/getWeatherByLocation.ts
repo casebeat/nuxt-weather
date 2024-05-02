@@ -7,7 +7,7 @@ export default async function getWeatherData(location: string) {
 
   if (!apiResponse) {
     throw new Error('Failed to fetch weather data')
-  }  
+  }
 
   const weatherData: LocationWeatherData = {
     name: apiResponse.location.name,
