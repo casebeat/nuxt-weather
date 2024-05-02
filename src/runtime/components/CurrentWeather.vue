@@ -1,0 +1,32 @@
+<template>
+  <div>
+    <div
+      v-if="weatherData"
+      class="weather-data"
+    >
+      <h4>{{ weatherData.name }} </h4>
+      <span v-if="scale=='c'">{{ weatherData.weather.temperatureCelcius }} °C</span>
+      <span v-if="scale=='f'">{{ weatherData.weather.temperatureFarenheit }} °F</span>
+      <span :title="weatherData.weather.conditionText"><img :src="weatherData.weather.conditionIcon"></span>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import { getWeatherByLocation } from '#imports'
+
+const props = defineProps({
+  location: {
+    required: true,
+    type: String,
+  },
+
+})
+
+const scale = ref('c')
+
+const { data: weatherData } = await useAsyncData(async () => {
+  return await getWeatherByLocation(props.location?.toString())
+})
+</script>
