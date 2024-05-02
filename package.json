@@ -1,6 +1,6 @@
 {
   "name": "nuxt-weather",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Weather Nuxt module",
   "repository": "your-org/my-module",
   "license": "MIT",
