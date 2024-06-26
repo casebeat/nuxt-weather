@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.8
+
+[compare changes](https://github.com/casebeat/nuxt-weather/compare/v0.0.7...v0.0.8)
+
+### 🚀 Enhancements
+
+- Added composable useWeatherData ([e95432a](https://github.com/casebeat/nuxt-weather/commit/e95432a))
+
+### ❤️ Contributors
+
+- Christian Fernandes <christian@casebeat.com>
+
 ## v0.0.7
 
 [compare changes](https://github.com/casebeat/nuxt-weather/compare/v0.0.6...v0.0.7)
