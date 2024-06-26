@@ -1,5 +1,8 @@
 import { defineNuxtModule, addImportsDir, createResolver, addComponentsDir, addServerHandler } from '@nuxt/kit'
 
+import getWeatherByLocation from './runtime/functions/getWeatherByLocation'
+
+export { getWeatherByLocation }
 // Module options TypeScript interface definition
 export interface ModuleOptions {}
 
@@ -26,5 +29,7 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     addImportsDir(resolver.resolve('runtime/functions'))
+
+    addImportsDir(resolver.resolve('runtime/composables'))
   },
 })
