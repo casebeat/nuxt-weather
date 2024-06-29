@@ -30,7 +30,7 @@ That's it! You can now use the weather module in your Nuxt app ✨
 
 Add it in your template like this
 ```bash
-&lt;CurrentWeather location="Stockholm" /&gt;
+<CurrentWeather location="Stockholm" />
 ```
 
 ...or get the data from the composable 
