@@ -19,10 +19,19 @@ Install the module to your Nuxt application with one command:
 npx nuxi module add nuxt-weather
 ```
 
+Get your api key from https://www.weatherapi.com/
+
+Add your key to you environment:
+WEATHER_API_KEY=<Your Weather API KEY>
+
 That's it! You can now use the weather module in your Nuxt app ✨
 
 Add it in your template like this
 &lt;CurrentWeather location="Stockholm" /&gt;
+
+or get the data from the composable 
+
+const currentWeatherData = await useWeatherData('Stockholm')
 
 ## Contribution
 
