@@ -22,10 +22,12 @@ const props = defineProps({
     required: true,
     type: String,
   },
+  scale: {
+    type: String,
+    default: 'c',
+  },
 
 })
-
-const scale = ref('c')
 
 const { data: weatherData } = await useAsyncData(async () => {
   return await getWeatherByLocation(props.location?.toString())

@@ -1,9 +1,16 @@
 <template>
   <div>
-    <CurrentWeather location="Stockholm" />
+    <CurrentWeather location="Stockholm" scale="c" />
   </div>
-  <div>
-    {{ currentWeatherData }}
+  <div>    
+    <ul>
+      <li>Name: {{ currentWeatherData.name }}°C</li>
+      <li>Country: {{ currentWeatherData.country }}</li>
+      <li>Celsius: {{ currentWeatherData.weather.temperatureCelcius }}°C</li>
+      <li>Fahrenheit: {{ currentWeatherData.weather.temperatureFahrenheit }}°F</li>
+      <li>Condition: {{ currentWeatherData.weather.conditionText }}</li>
+      <li>Icon: {{ currentWeatherData.weather.conditionIcon }}</li>
+    </ul>
   </div>
 </template>
 
