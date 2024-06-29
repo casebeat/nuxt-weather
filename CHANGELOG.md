@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.0.9
+
+[compare changes](https://github.com/casebeat/nuxt-weather/compare/v0.0.8...v0.0.9)
+
+### 🚀 Enhancements
+
+- Export LocationWeatherData type ([eb85f32](https://github.com/casebeat/nuxt-weather/commit/eb85f32))
+- Added scale property in component ([9ab3a0c](https://github.com/casebeat/nuxt-weather/commit/9ab3a0c))
+
+### 🏡 Chore
+
+- Updated readme ([84c898f](https://github.com/casebeat/nuxt-weather/commit/84c898f))
+
+### ❤️ Contributors
+
+- Christian Fernandes <christian@casebeat.com>
+
 ## v0.0.8
 
 [compare changes](https://github.com/casebeat/nuxt-weather/compare/v0.0.7...v0.0.8)
