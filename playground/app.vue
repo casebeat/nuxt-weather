@@ -15,4 +15,5 @@ useHead({
 })
 
 const currentWeatherData = await useWeatherData('Stockholm')
+
 </script>

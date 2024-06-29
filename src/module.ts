@@ -5,6 +5,7 @@ import getWeatherByLocation from './runtime/functions/getWeatherByLocation'
 export { getWeatherByLocation }
 // Module options TypeScript interface definition
 export interface ModuleOptions {}
+export type { LocationWeatherData } from './runtime/models/LocationWeatherData'
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
