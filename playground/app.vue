@@ -1,8 +1,11 @@
 <template>
   <div>
-    <CurrentWeather location="Stockholm" scale="c" />
+    <CurrentWeather
+      location="Stockholm"
+      scale="c"
+    />
   </div>
-  <div>    
+  <div>
     <ul>
       <li>Name: {{ currentWeatherData.name }}°C</li>
       <li>Country: {{ currentWeatherData.country }}</li>
@@ -22,5 +25,4 @@ useHead({
 })
 
 const currentWeatherData = await useWeatherData('Stockholm')
-
 </script>
