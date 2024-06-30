@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
 
 async function getWeatherData(location: string) {
   // get api key from enivronment variable
-  const options = useRuntimeConfig().public.nuxtWeather
+  const options = useRuntimeConfig().private.nuxtWeather
 
   const apiKey = options.apiKey
 
