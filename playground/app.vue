@@ -5,7 +5,7 @@
       scale="c"
     />
   </div>
-  <div>
+  <div v-if="currentWeatherData">
     <ul>
       <li>Name: {{ currentWeatherData.name }}°C</li>
       <li>Country: {{ currentWeatherData.country }}</li>
@@ -14,6 +14,9 @@
       <li>Condition: {{ currentWeatherData.weather.conditionText }}</li>
       <li>Icon: {{ currentWeatherData.weather.conditionIcon }}</li>
     </ul>
+  </div>
+  <div v-else>
+    <p>Failed to get weather</p>
   </div>
 </template>
 
@@ -24,5 +27,5 @@ useHead({
   link: [{ rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' }],
 })
 
-const currentWeatherData = await useWeatherData('Stockholm')
+const { data: currentWeatherData } = await useWeatherData('Stockholm')
 </script>
